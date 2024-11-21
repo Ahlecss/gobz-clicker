@@ -117,14 +117,21 @@ button:focus-visible {
 }
 
 .teachers li {
-  cursor: pointer;
   border: 1px solid #777;
   border-radius: 8px;
   transition: all ease 0.3s;
   padding: 1rem 2rem;
+  opacity: 0.7;
+
 }
 
 .teachers li:hover {
   border: 1px solid white;
   opacity: 1;
+}
+
+.teachers li.teacherClickable {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: all;
 }
