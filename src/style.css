@@ -121,8 +121,7 @@ button:focus-visible {
   border-radius: 8px;
   transition: all ease 0.3s;
   padding: 1rem 2rem;
-  opacity: 0.7;
-
+  opacity: 0.5;
 }
 
 .teachers li:hover {
@@ -134,4 +133,15 @@ button:focus-visible {
   opacity: 1;
   cursor: pointer;
   pointer-events: all;
+}
+
+.teachers img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.teachers .teacherClickable img {
+  filter: grayscale(0);
 }

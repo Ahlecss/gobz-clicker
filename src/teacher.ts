@@ -10,6 +10,7 @@ export class Teacher {
     elGenerate: HTMLElement;
     elPrice: HTMLElement;
     elCount: HTMLElement;
+    elTeacherImage: HTMLImageElement;
     counter: Counter;
 
     constructor(price: number, name: string, generate: number) {
@@ -22,6 +23,7 @@ export class Teacher {
         this.elPrice = document.createElement('h3')
         this.elGenerate = document.createElement('h4')
         this.elCount = document.createElement('h5')
+        this.elTeacherImage = document.createElement('img')
         this.init()
         this.addThunes()
 
@@ -31,13 +33,14 @@ export class Teacher {
     init() {
         const teacherList = document.getElementById('teachers')!
         // const elBlock = document.createElement('div')
-        // const teacherImage = document.createElement('img')
         this.elName.textContent = this.name
+        this.elTeacherImage.src = `teachers/${this.name}.png`
         this.elPrice.textContent = `Prix : ${this.price}`
         this.elCount.textContent = `Quantite : ${this.count}`
         this.elGenerate.textContent = `Génére : ${this.generate}`
 
         this.liTeacher.appendChild(this.elName)
+        this.liTeacher.appendChild(this.elTeacherImage)
         this.liTeacher.appendChild(this.elPrice)
         this.liTeacher.appendChild(this.elGenerate)
         this.liTeacher.appendChild(this.elCount)
